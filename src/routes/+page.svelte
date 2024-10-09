@@ -1,4 +1,6 @@
-<!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
+<script lang="ts">
+	import { goto } from "$app/navigation";
+</script>
 
 <div class="container h-full mx-auto flex justify-center items-center">
 	<div class="space-y-5">
@@ -11,5 +13,8 @@
 				<code class="code">/src/routes/+page.svelte</code> - this page, you can replace the contents
 			</li>
 		</ul>
+		<div>
+			<button class="btn variant-filled-primary" on:click={() => goto('/database-test')}>Database Example</button>
+		</div>
 	</div>
 </div>

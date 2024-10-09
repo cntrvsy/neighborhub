@@ -36,9 +36,9 @@ export async function handle({ event, resolve }) {
 	response.headers.append('set-cookie', event.locals.pb.authStore.exportToCookie({ secure: false }));
 	
 	// console.log("PB instance set in hooks:", event.locals.pb);
-	//protect the Portal route
-	if (event.url.pathname === '/Portal') {
-		//console.log("Portal yooh")
+	//protect the Protected route example route
+	if (event.url.pathname === '/Protected') {
+		//console.log("Protected route protected")
 		const user = await event.locals.user
 		if (!user) {
 			//User is not signed in
