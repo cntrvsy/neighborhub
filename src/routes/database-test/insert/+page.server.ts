@@ -1,5 +1,4 @@
-import { StoreSchema } from "$lib/types/schema";
-import { redirect } from '@sveltejs/kit'
+import { StoreInsertSchema } from "$lib/types/schema";
 import { ClientResponseError } from 'pocketbase';
 import { fail, error } from '@sveltejs/kit';
 import { superValidate, message } from 'sveltekit-superforms';
@@ -10,7 +9,7 @@ export const load = async ({ locals }) => {
     //we do not require anything from locals yet such as a session token right no so...
 
     //create and validate store form
-    const Store_Form = await superValidate(zod(StoreSchema));
+    const Store_Form = await superValidate(zod(StoreInsertSchema));
 
     //Combine data from locals and form into a single object
     const data:any = {Store_Form};
@@ -23,7 +22,7 @@ export const actions = {
     //"StoreInsert" action here refers to the name of the form action, so what should happen when the form
     //is submitted.
     StoreInsert: async ({ request, locals: { pb } }) => {
-        const Store_Form = await superValidate(request, zod(StoreSchema));
+        const Store_Form = await superValidate(request, zod(StoreInsertSchema));
         
         console.log('Store Form', Store_Form);
 
@@ -49,6 +48,7 @@ export const actions = {
                     return fail(500, { message: 'Server error. Try again later.'})
                 }
             }
+            // this sends a message to the client informing the user that the form has been submitted.
             return message(Store_Form,{text: 'Store inserted.', status: 200});
         }
     }

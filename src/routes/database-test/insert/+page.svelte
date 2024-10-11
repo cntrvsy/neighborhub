@@ -21,8 +21,8 @@
                         <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium">Add a Store</h1>
                         <p class="leading-relaxed mb-8">
                             Here you can add your own personal Stores. This includes store name,
-                             location, website and more in relation to your account. Stores here relate
-                             to shops that you want to keep track of and wnt to reference to.
+                            location, website and more in relation to your account. Stores here relate
+                            to shops that you want to keep track of and wnt to reference to.
                         </p>
                         <div class="side-line">
                             <div class="card p-2">

@@ -5,6 +5,13 @@ declare global {
 		interface Locals {
 			pb: PocketBase;
 		}
+		interface PageData {
+			flash?: { type: 'success' | 'error'; message: string };
+		}
+		interface Error {}
+		// interface Platform {}
 	}
 	
 }
+
+export {};
