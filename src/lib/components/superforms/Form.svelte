@@ -67,4 +67,4 @@
 </form>
 
 <!-- uncomment for local development use only. -->
-<!-- <SuperDebug data={$form}></SuperDebug> -->
+<SuperDebug data={$form}></SuperDebug>

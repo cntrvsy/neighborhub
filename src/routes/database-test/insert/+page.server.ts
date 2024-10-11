@@ -37,7 +37,7 @@ export const actions = {
 
             // sending it to PB (pocketbase)
             try {
-                await pb.collection('stores').create({ name, description, location });
+                await pb.collection('store').create({ name, description, location });
                 console.log("PB run (Store data inserted)");
             } catch (err) {
                 //if PB returns error
@@ -49,6 +49,7 @@ export const actions = {
                     return fail(500, { message: 'Server error. Try again later.'})
                 }
             }
+            return message(Store_Form,{text: 'Store inserted.', status: 200});
         }
     }
 } satisfies Actions
