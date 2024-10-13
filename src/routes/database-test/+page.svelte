@@ -50,13 +50,7 @@ import { Trash2, Pencil } from 'lucide-svelte';
     <div class="flex item-center justify-center pt-4">
         <button class="btn variant-filled-primary" on:click={() => goto('/database-test/insert')}>Insert a Store</button>
     </div>
-    <div class="flex item-center justify-center pt-4">
-        {#if $flash}
-            <div class=" alert {$flash.type=='success' ? 'variant-filled-success' : 'variant-filled-error'}">
-                {$flash.message}
-            </div>
-        {/if} 
-    </div>
+<!-- Ideally i would like to move to using tzezars-datagrid in the future -->
     <div class="flex item-center justify-center h-screen p-10">
        <!-- table -->
         <div class="table table-hover table-cell-compact">
