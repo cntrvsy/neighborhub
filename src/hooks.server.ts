@@ -37,8 +37,8 @@ export async function handle({ event, resolve }) {
 	
 	// console.log("PB instance set in hooks:", event.locals.pb);
 	//protect the Protected route example route
-	if (event.url.pathname === '/Protected') {
-		//console.log("Protected route protected")
+	if (event.url.pathname === '/protected') {
+		//console.log("Protected route, protected")
 		const user = await event.locals.user
 		if (!user) {
 			//User is not signed in

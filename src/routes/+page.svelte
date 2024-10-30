@@ -14,7 +14,8 @@
 			</li>
 		</ul>
 		<div>
-			<button class="btn variant-filled-primary" on:click={() => goto('/database-test')}>Database Example</button>
+			<button class="btn variant-filled-primary px-2" on:click={() => goto('/database-test')}>Database Example</button>
+			<button class="btn variant-filled-primary px-2" on:click={() => goto('/protected')}>protected route</button>
 		</div>
 	</div>
 </div>
