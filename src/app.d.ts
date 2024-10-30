@@ -4,6 +4,7 @@ declare global {
 	declare namespace App {
 		interface Locals {
 			pb: PocketBase;
+			user?: UsersRecord;
 		}
 		interface PageData {
 			flash?: { type: 'success' | 'error'; message: string };
